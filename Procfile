@@ -1,0 +1,1 @@
+web: gunicorn FineArtsClub.wsgi --log-file -
