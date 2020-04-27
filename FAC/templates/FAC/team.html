@@ -1,0 +1,131 @@
+{% load static %}
+    <style>
+        .teamnote {
+            font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #343a40;
+            font-size: 5vw;
+            margin-left: 5vw;
+            margin-top: 6vw;
+        }
+        .tz-gallery {
+            padding: 40px;
+        }
+        
+        .tz-gallery .thumbnail {
+            padding: 0;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            border: none;
+            transition: 0.15s ease-in-out;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
+        }
+        
+        .tz-gallery .thumbnail:hover {
+            transform: translateY(-10px) scale(1.02);
+        }
+        
+        .tz-gallery img {
+            border-radius: 4px 4px 0 0;
+        }
+        
+        .tz-gallery .caption{
+            text-align: center;
+            padding: 26px 30px;
+        }
+        
+        .tz-gallery .caption h3 {
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 0;
+        }
+        
+        .tz-gallery .caption p {
+            font-size: 12px;
+            color: #7b7d7d;
+            margin: 0;
+        }
+        
+        .baguetteBox-button {
+            background-color: transparent !important;
+        }
+    </style>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+
+    
+    <h1>Team Members</h1>
+    <div class="tz-gallery">
+        <div class="row">
+            <div class="col-sm-4 col-md-4 h-100">
+                <div class="thumbnail">
+                    <a href="{% static 'img/DrSrimantaRay.jpeg' %}" class="d-block mb-4 h-100">
+                        <img class="img-fluid img-thumbnail" src="{% static 'img/DrSrimantaRay.jpeg' %}" alt="{{member.position}}">
+                    </a>
+                    <div class="caption">
+                        <h4>Dr. Srimanta Ray</h4>
+                        <h5>Faculty Co-ordinator</h5>
+                        <h6>HOD, Chemical Engineering</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 h-100">
+                <div class="teams">
+                    <div class="d-print-block">
+                        <p class="teamnote">The Core Team of the Fine Arts Club are:</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% for member in teammembers %}
+            <div class="col-sm-4 col-md-4 h-100">
+                <div class="thumbnail">
+                    <a href="{{member.img.url}}" class="d-block mb-4 h-100">
+                        <img class="img-fluid img-thumbnail" src="{{member.img.url}}" alt="{{member.position}}">
+                    </a>
+                    <div class="caption">
+                        <h4>{{member.name}}</h4>
+                        <h5>{{member.position}}</h5>
+                        <div class="social-icons">
+                            {% if member.facebook %}
+                            <a href="{{member.facebook}}">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            {% endif %}
+                            {% if member.instagram %}
+                            <a href="{{member.instagram}}">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            {% endif %}
+                            {% if member.github %}
+                            <a href="{{member.github}}">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            {% endif %}
+                            {% if member.linkedin %}
+                            <a href="{{member.linkedin}}">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            {% endif %}
+                            {% if member.gmail %}
+                            <a href="{{member.gmail}}">
+                                <i class="fas fa-mail-bulk    "></i>
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+        
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+<script>
+    baguetteBox.run('.tz-gallery');
+</script>
