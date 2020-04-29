@@ -7,7 +7,8 @@ def home(request):
     digital = Digital.objects.all()
     teammembers = Team.objects.all()
     moment = Moment.objects.all()
-    return render(request, 'FAC/index.html',{'penpaper':penpaper, 'digital':digital, 'teammembers':teammembers, 'moment':moment})
+    notes = Notice.objects.all()
+    return render(request, 'FAC/index.html',{'penpaper':penpaper, 'digital':digital, 'teammembers':teammembers, 'moment':moment, 'notes':notes})
 
 def pen_paper(request):
     penpaper = Pen_Paper.objects.all()
@@ -28,3 +29,18 @@ def ourmoments(request):
     moment = Moment.objects.all()
     context = {'moment':moment}
     return render(request, 'FAC/momentgallery.html', context)
+
+def notice(request):
+    notes = Notice.objects.all()
+    context = {'notes':notes}
+    return render(request, 'FAC/notice.html', context)
+
+def veterans(request):
+    formers = Team.objects.all()
+    context = {'formers':formers}
+    return render(request, 'FAC/veterans.html', context)
+
+def noticeboard(request):
+    boards = Notice.objects.all()
+    context = {'boards':boards}
+    return render(request, 'FAC/noticeboard.html', context)
