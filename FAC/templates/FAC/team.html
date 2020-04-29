@@ -57,7 +57,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
 
     
-    <h1>Team Members</h1>
+    <h2 class="mb-5">Team members</h2>
     <div class="tz-gallery">
         <div class="row">
             <div class="col-sm-4 col-md-4 h-100">
@@ -65,23 +65,25 @@
                     <a href="{% static 'img/DrSrimantaRay.jpeg' %}" class="d-block mb-4 h-100">
                         <img class="img-fluid img-thumbnail" src="{% static 'img/DrSrimantaRay.jpeg' %}" alt="{{member.position}}">
                     </a>
-                    <div class="caption">
+                    <div class="caption social-icons">
                         <h4>Dr. Srimanta Ray</h4>
                         <h5>Faculty Co-ordinator</h5>
                         <h6>HOD, Chemical Engineering</h6>
+                        <a href="http://www.nita.ac.in/fac/chemical_sray.html"><i class="fas fa-globe    "></i></a>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6 col-md-6 h-100">
                 <div class="teams">
                     <div class="d-print-block">
-                        <p class="teamnote">The Core Team Members of the Fine Arts Club are:</p>
+                        <p class="teamnote">The Core Team of the Fine Arts Club are:</p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
             {% for member in teammembers %}
+            {% if member.current %}
             <div class="col-sm-4 col-md-4 h-100">
                 <div class="thumbnail">
                     <a href="{{member.img.url}}" class="d-block mb-4 h-100">
@@ -120,10 +122,12 @@
                     </div>
                 </div>
             </div>
+        {% endif %}
         {% endfor %}
         </div>
         
     </div>
+    <a href="{% url 'veterans' %}"><button class="btn btn-block btn-danger" style="text-decoration: none;">Members who were a part of the journey before</button></a>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
 <script>
