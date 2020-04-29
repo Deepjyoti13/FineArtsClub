@@ -7,4 +7,7 @@ urlpatterns = [
     path('penpaper/', views.pen_paper, name="penpaper"),
     path('digital/', views.digital_art, name="digital"),
     path('moments/', views.ourmoments, name="moments"),
+    path('notice/', views.notice, name="notice"),
+    path('veterans/', views.veterans, name="veterans"),
+    path('noticeboard/', views.noticeboard, name="noticeboard"),
 ]
