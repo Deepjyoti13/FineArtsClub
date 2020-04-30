@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'FAC',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -126,3 +127,12 @@ STATICFILES_DIRS = [
 ]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+AWS_ACCESS_KEY_ID = 'AKIARQPRFZKKGR7TCMVU'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'fineartsclub'
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
