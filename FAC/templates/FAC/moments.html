@@ -2,8 +2,8 @@
 <div class="subheading mb-5">We create memories together in the journey with our club.</div>
 <marquee behavior="alternate" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="20">
     {% for m in moment%}
-        {% if m.id <= 10 %}
-            <img src="{{m.img.url}}" width="auto" height="200" scrolldelay="100"/>
+        {% if m.id <= 16 %}
+            <img src="{{m.img.url}}" width="auto" height="200" scrolldelay="200"/>
         {% endif %}
     {% endfor %}
 </marquee>
