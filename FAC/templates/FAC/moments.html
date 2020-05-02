@@ -3,7 +3,7 @@
 <marquee behavior="alternate" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="20">
     {% for m in moment%}
         {% if m.id <= 10 %}
-            <img src="{{m.img.url}}" width="300" height="200" />
+            <img src="{{m.img.url}}" width="auto" height="200" />
         {% endif %}
     {% endfor %}
 </marquee>
