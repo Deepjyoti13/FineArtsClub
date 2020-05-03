@@ -5,7 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moments Gallery</title>
     <link rel = "icon" href ="https://imagizer.imageshack.com/img923/4513/dsiSR7.png" type = "image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&family=Montserrat:wght@200&display=swap" rel="stylesheet">
+
     <style>
+        header {
+            text-align: center;
+        }
+        
+        header h1 {
+            font-family: 'Jost', sans-serif;
+        }
+        
+        header p {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
         #photos {
             /* Prevent vertical gaps */
             line-height: 0;
@@ -60,6 +74,10 @@
     </style>
 </head>
 <body>
+    <header>
+        <h1>Moments Gallery</h1>
+        <p class="page-description text-center">We create memories together in the journey with our club.</p>
+    </header>
     <section id="photos">
     {% for moments in moment %}
         <a class="lightbox" href="{{moments.img.url}}">
