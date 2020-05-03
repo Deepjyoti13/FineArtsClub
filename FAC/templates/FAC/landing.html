@@ -26,6 +26,7 @@
         color: white;
         font-size: 20px;
         font-family: Comfortaa;
+        
     }
 
     .logopic {
@@ -44,6 +45,39 @@
         color: #fff;
         cursor: default;
         z-index: 10;
+    }
+
+    p {
+        animation:blinkingText 2.5s ease-in-out infinite;
+    }
+
+    @keyframes blinkingText{
+        0%{     color: #fff;    }
+        25%{    color: #fff; }
+        50%{    color: transparent; }
+        75%{    color:transparent;  }
+        100%{   color: #fff;    }
+    }
+    @-o-keyframes blinkingText{
+        0%{     color: #fff;    }
+        25%{    color: #fff; }
+        50%{    color: transparent; }
+        75%{    color:transparent;  }
+        100%{   color: #fff;    }
+    }
+    @-webkit-keyframes blinkingText{
+        0%{     color: #fff;    }
+        25%{    color: #fff; }
+        50%{    color: transparent; }
+        75%{    color:transparent;  }
+        100%{   color: #fff;    }
+    }
+    @-moz-keyframes blinkingText{
+        0%{     color: #fff;    }
+        25%{    color: #fff; }
+        50%{    color: transparent; }
+        75%{    color:transparent;  }
+        100%{   color: #fff;    }
     }
 
     @-moz-keyframes color {
@@ -114,8 +148,9 @@
         background: #e61919;
     }
     }
+
     @media screen and (max-width: 900px) {
-    .logopic {
+        .logopic {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -125,10 +160,11 @@
             height: auto;
         }
     }
+    
 </style>
 
+<img class="logopic" src="{% static 'img/flc.png' %}">
 <div id="landing">
-    <img class="logopic" src="{% static 'img/flc.png' %}">
     <div class="logocon">
         <span class="logo">fine·arts·club</span>
     </div>
