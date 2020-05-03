@@ -60,12 +60,12 @@
     </style>
 </head>
 <body>
-    {% for moments in moment %}
     <section id="photos">
+    {% for moments in moment %}
         <a class="lightbox" href="{{moments.img.url}}">
             <img src="{{moments.img.url}}" alt="Moments">
         </a>
-    </section>
     {% endfor %}
+    </section>
 </body>
 </html>
