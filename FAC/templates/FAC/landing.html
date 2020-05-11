@@ -329,8 +329,67 @@
           overflow-x: hidden;
         }
       }
-    </style>
+      .rotate {
+        z-index: 5;
+        opacity: 0.85;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
 
+      .fac {
+        z-index: 5;
+        opacity: 0.9;
+        position: absolute;
+        top: 50%;
+        right: 10%;
+        transform: translate(0%, -40%);
+      }
+
+      .mandala {
+        -webkit-animation: mymove 10s linear infinite;
+        animation: mymove 10s linear infinite;
+      }
+      .faclogo {
+        -webkit-animation: pop 10s linear infinite;
+        animation: pop 10s linear infinite;
+      }
+
+      @keyframes pop {
+        0% {
+          transform: scale(1);
+        }
+        25% {
+          transform: scale(1.1);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+        75% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      @-webkit-keyframes mymove {
+        from {-webkit-transform: rotate(0deg);} /* Safari */
+        to {-webkit-transform: rotate(360deg);} /* Safari */
+        from {transform: rotate(0deg);}
+        to {transform: rotate(360deg);}
+    }
+      
+    @keyframes mymove {
+        from {-webkit-transform: rotate(0deg);} /* Safari */
+        to {-webkit-transform: rotate(360deg);} /* Safari */
+        from {transform: rotate(0deg);}
+        to {transform: rotate(360deg);} 
+    }
+    </style>
+    <div class="rotate"><img class="mandala" style="width: 50vw; height:auto;" src="{% static 'img/Mandala.png' %}"></div>
+    <div class="fac"><img class="faclogo" style="width: 20vw; height:auto;" src="{% static 'img/flc.png' %}"></div>
     <div id="landing">
       <div class="logocon">
         <span class="logo">
