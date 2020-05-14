@@ -11,11 +11,13 @@
   <link rel = "icon" href ="https://imagizer.imageshack.com/img923/4513/dsiSR7.png" type = "image/x-icon">
   <title>Fine Arts Club, NIT-A.</title>
   <style>
+    body::-webkit-scrollbar {
+      display: none;
+    }
     body {
       overflow-x: hidden;
     }
   </style>
-
   <!-- Bootstrap core CSS -->
   <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -25,8 +27,8 @@
   <!-- Custom fonts for this template -->
   <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
 
   <!-- Custom styles for this template -->
   <link href="{% static 'css/FAC.css' %}" rel="stylesheet">
@@ -36,7 +38,7 @@
 <body id="page-top">
 
   {%  include 'FAC/navbar.html' %}
-  <div style="z-index: -100; position: fixed; top: 0; height: 100vh; width: 100%; background-image: linear-gradient(135deg, transparent 0%, transparent 6%,rgba(71, 71, 71,0.04) 6%, rgba(71, 71, 71,0.04) 22%,transparent 22%, transparent 100%),linear-gradient(45deg, transparent 0%, transparent 20%,rgba(71, 71, 71,0.04) 20%, rgba(71, 71, 71,0.04) 47%,transparent 47%, transparent 100%),linear-gradient(135deg, transparent 0%, transparent 24%,rgba(71, 71, 71,0.04) 24%, rgba(71, 71, 71,0.04) 62%,transparent 62%, transparent 100%),linear-gradient(45deg, transparent 0%, transparent 73%,rgba(71, 71, 71,0.04) 73%, rgba(71, 71, 71,0.04) 75%,transparent 75%, transparent 100%),linear-gradient(90deg, rgb(255,255,255),rgb(255,255,255));"></div>
+  <div style="z-index: -100; position: fixed; top: 0; height: 100vh; width: 100%; background: #e5e5e5;"></div>
   <div class="container-fluid p-0">
 
     <section id="fac">
@@ -51,7 +53,7 @@
       </div>
     </section>
 
-    <hr class="m-0">
+    
 
     <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="events">
       <div class="w-100">
@@ -59,7 +61,7 @@
       </div>
     </section>
 
-    <hr class="m-0">
+    
 
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="gallery">
       <div class="w-100">
@@ -67,7 +69,7 @@
       </div>
     </section>
 
-    <hr class="m-0">
+    
 
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="moments">
       <div class="w-100">
@@ -75,7 +77,7 @@
       </div>
     </section>
 
-    <hr class="m-0">
+    
 
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="team">
       <div class="w-100">
@@ -83,7 +85,7 @@
       </div>
     </section>
 
-    <hr class="m-0">
+    
 
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="notice">
       <div class="w-100">
@@ -91,7 +93,7 @@
       </div>
     </section>
 
-    <hr class="m-0">
+    
 
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="footer">
       <div class="w-100">
