@@ -44,3 +44,8 @@ def noticeboard(request):
     boards = Notice.objects.all()
     context = {'boards':boards}
     return render(request, 'FAC/noticeboard.html', context)
+
+def winners(request):
+    win = Winner.objects.all()
+    context = {'win':win}
+    return render(request, 'FAC/winners.html', context)

@@ -8,4 +8,5 @@ admin.site.register(Digital)
 admin.site.register(Team)
 admin.site.register(Moment)
 admin.site.register(Notice)
+admin.site.register(Winner)
 

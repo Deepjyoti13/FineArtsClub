@@ -50,3 +50,21 @@ class Notice(models.Model):
     def __str__(self):
         return self.title
     
+class Winner(models.Model):
+    competition_logo = models.ImageField(upload_to='competitions')
+    competition_name = models.CharField(max_length=25, null=True)
+    art_like_first = models.ImageField(upload_to='winners')
+    artist_like_first = models.ImageField(upload_to='artists')
+    name_like_first = models.CharField(max_length=50)
+    art_like_second = models.ImageField(upload_to='winners')
+    artist_like_second = models.ImageField(upload_to='artists')
+    name_like_second = models.CharField(max_length=50)
+    art_like_third = models.ImageField(upload_to='winners')
+    artist_like_third = models.ImageField(upload_to='artists')
+    name_like_third = models.CharField(max_length=50)
+    art_judge_first = models.ImageField(upload_to='winners')
+    artist_judge_first = models.ImageField(upload_to='artists')
+    name_judge_first = models.CharField(max_length=50)
+    
+    def __str__(self):
+        return self.competition_name
